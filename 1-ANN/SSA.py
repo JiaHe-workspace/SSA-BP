@@ -173,8 +173,8 @@ def Tent_SSA(pop, dim, lb, ub, Max_iter, fun):
             GbestScore = copy.copy(fitness[0])
             GbestPositon[0, :] = copy.copy(X[0, :])
         Curve[i] = GbestScore  # 最优适应度
-        # if GbestScore[0] < 0.001:
-        #     break
+        if GbestScore[0] < 0.001:
+            break
         # Curve[i] = ditAvg  # 平均适应度
     return GbestScore, GbestPositon, Curve
 
